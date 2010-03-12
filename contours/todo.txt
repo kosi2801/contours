@@ -1,0 +1,31 @@
+Todo:
+
+Features
+- conditional parsing
+- little/big endian
+
+datatypes
+X INTEGER
+X LONG
+X BCD
+- Bitfield
+- terminated Strings/Array
+
+generated Parser
+- simplify generation of parser
+XX use common (generated) method for reading data from inputstream
+XX finalize as much fields as possible in generated parser
+X early EOF handling
+- better exceptions
+- add javadoc to parser and datastructures
+- use java.nio channels (performance)
+- generate bytecode directly instead of java code (javassist, asm?)
+
+Tests
+- datatypes test should also test all datatypes->context possibilities
+- datatypes test should also test unnamed datatypes
+
+Tools
+- Prüfen, ob mit EMFText ein Definition-Editor-Plugin für Eclipse generiert werden kann
+-- http://www.heise.de/developer/meldung/Eclipse-Tool-fuer-Domain-Specific-Languages-aktualisiert-866554.html
+-- http://www.emftext.org/index.php?title=EMFText

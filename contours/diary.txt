@@ -1,0 +1,87 @@
+30.4.2009
+- analyzing sablecc-examples and projects
+- evaluating sablecc3 and sablecc4-alpha
+-- deciding on sablecc3, as sablecc4-alpha has no code-output yet
+
+1.5.
+- creating initial sablecc-grammar and working on example
+-- http://www.brainycreatures.org/compiler/sablecc.asp
+-- http://xbean.cs.ccu.edu.tw/~dan/SableCCDoc/sableCCGrammars/A%20SableCC%20Grammar%20(tud_inf_pi_sablecc_java).htm
+- debugging errors in grammar
+
+2.5. 
+- enhancing grammar with multipliers and adding initial datatype 'byte'
+- setting up build-environment
+- tweaking grammar and example
+
+3.5.
+- creating semantic analyzer
+-- http://www.brainycreatures.org/compiler/sablecc.asp
+- creating basic semantic exceptions
+-- needed to use RuntimeExceptions because generated code would not be compatible otherwise
+- creating semantic testcases
+
+6.5.
+- working on DataStructureGenerator
+- problems with package-identifier (does not accept identifier without ".")
+
+9.5.
+- working on DataStructureGenerator, enhancing output of class attribute code
+
+23.5.
+- continuing work on DataStructureGenerator, leaving out unnamed elements
+- enhancing SemanticAnalyzer to error on used but undefined components
+- enhancing test coverage for DataStructureGenerator, testing for output
+- adding hexadecimal byte as element type (+check to stay within byte-range with value)
+- working on multiplicity of attributes
+
+24.5
+- continuing work with multiplicity
+- hunting bug in DataStructureGenerator, component-attributes were all generated with the same identifier. cause: enums are static *doh*
+
+31.5.
+- starting work on ParserGenerator
+- creating parser source files for different components 
+
+1.6.
+- adding output of attributes to component parser source
+- adding output of simple reader-logic to parser
+- enhancing reader-logic to check for static read values
+
+2.6.
+- adding tests for generated classes
+- adding EOF check
+- adding context class for parsing, tracking parse-position and adding position to exceptions
+
+3.6.
+- implementing support for dynamic (context-) multipliers from file-content
+- adding semantic check to only allow context multipliers where it makes sense
+
+7.6.
+- skip assignments if components are unnamed and not stored in context
+- only add imports for .ds if components are needed somewhere
+
+9.6.
+- simplifying generation of parser-code, refactoring common code into generated ParseUtil.java
+- adding more datatypes to grammar: INT, LONG, BCD
+- adding test for parsing new datatypes
+
+10.6.
+- debugging errors with new datatypes; should not use reserved words as name for fields... *doh*
+
+13.6.
+- adding parser logic for reading INT, LONG from files
+
+17.6.
+- adding parser logic for reading BCD, fixing context-reading of INT and LONG
+
+8.8.
+- enhancing datatype-testcase to test for much more possibilities
+- refactoring generation of datatype- and parser-code for datatypes into class-structure
+
+7.3.2010
+- refactoring to name "Stencil"
+- minor FindBugs corrections
+
+12.3.
+- refactoring again to "Contours" ("Stencil" already used in a load of other projects)

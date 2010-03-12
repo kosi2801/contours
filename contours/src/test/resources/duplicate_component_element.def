@@ -1,0 +1,9 @@
+identifier(Windows.Executable);
+start(component_a);
+
+component_a ::=
+	"MZ",
+	BYTE {a_byte},
+	BYTE {another_byte},
+	BYTE {a_byte};			# naming is already existing
+

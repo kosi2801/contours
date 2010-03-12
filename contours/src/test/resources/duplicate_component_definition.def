@@ -1,0 +1,8 @@
+identifier(windows.executable);
+start(component_a);
+
+component_a ::=
+	"MZ";
+
+component_a ::=		# defining an already defined component
+	"AA";	

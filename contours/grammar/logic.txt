@@ -1,0 +1,11 @@
+identifier(Windows_Executable);
+start(component_b);
+
+component_a ::=
+	"MZ", 
+	BYTE (3) {named_bytes},
+	file_end;
+
+file_end ::=
+	EOF;
+	
