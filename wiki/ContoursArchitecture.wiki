@@ -4,7 +4,7 @@
 
 The Countours architecture is divided into several stages. As a visual guide take the following graph:
 
-http://contours.googlecode.com/svn/trunk/website/Contours%20Architecture.png
+http://contours.googlecode.com/svn/trunk/website/ContoursArchitecture.png
 
 The yellow parts are the parts which build the foundation of the Contours framework:
    * The *Contours Grammar* defines the syntax of the custom File Definition. This grammar is taken by the *SableCC* parser generator and creates a parser for the Contours File Definition syntax.
@@ -16,4 +16,3 @@ The dark blue part is the user-provided part:
 The green parts are the ones generated with a specific *File Definition*:
    * The *Reader* is responsible for reading a *Binary File*, analyzing its structure according to the definition and filling the data into the *Data Structure*.
    * The *Data Structure* is composed by hirarchical organized Java classes which build the storage container for the read data from the file. This structure is then available for further processing of the user application.
-
