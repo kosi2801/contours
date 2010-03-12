@@ -1,0 +1,23 @@
+identifier(test.lob);
+output_path("./src-gen/test/lob");
+start(lob);	
+
+lob ::= 
+	header {header}, 
+	body {body};
+#	EOF;
+
+header ::=
+	"LOB", 			# magic bytes
+	BYTE [number] {number},
+	BYTE [width] {width},	
+	BYTE [height] {height};
+	
+body ::=
+	block (number) {blocks};
+
+block ::=
+	line (height) {lines};
+	
+line ::= 
+	BYTE (width) {bytes};

@@ -1,0 +1,6 @@
+identifier(Windows.Executable);
+start(component_a);
+
+component_a ::=
+	"MZ" (0);			# multiplier of 0 is not valid
+

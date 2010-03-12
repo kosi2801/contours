@@ -1,0 +1,15 @@
+identifier(windows.executable);
+start(component_a);
+
+component_a ::=
+	"MZ" {magic_bytes}, 
+	after_header_struct,		# this is never defined
+	BYTE (3) {named_bytes},
+	BYTE {a_byte},
+	file_end;
+
+file_end ::=
+	BYTE {a_byte},
+	EOF;
+
+	

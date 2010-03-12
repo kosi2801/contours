@@ -1,0 +1,6 @@
+identifier(Windows.Executable);
+start(component_a);
+
+component_a ::=
+	"MZ" [invalid_multiplier];			# assigning a context multiplier does not make sense for static strings
+

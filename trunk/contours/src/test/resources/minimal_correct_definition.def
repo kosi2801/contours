@@ -1,0 +1,7 @@
+identifier(a_b);   # test identifier without dot
+start(comp_a);
+
+comp_a ::=         # this is the bare minimum
+	EOF;
+
+	

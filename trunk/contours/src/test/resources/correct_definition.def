@@ -1,0 +1,31 @@
+identifier(windows.executable);		# this is the generated classpath
+output_path("./src-gen/windows/executable");           # the root folder of the created classes
+start(component_a);					# where the evaluation of a file starts
+
+component_a ::=						# definition of "component_a"
+	"MZ",							# definition of unnamed static string "MZ" 
+	"MZ" {mz_1},			 		# a static string named "mz_1" and containing "MZ"
+	"MZ" (2) {mz_2}, 				# a static string named "mz_2" and containing "MZMZ"
+	0x41,							# definition of unnamed hexadecimal byte containing 0x41
+	0x42 {hex_1},					# a hexadecimal byte "hex_1" containing 0x42
+	0x43 (3) {hex_2},				# a hexadecimal byte-array "hex_2" containing 0x434343
+	after_header_struct,			# an unnamed component 
+	after_header_struct {ahs_1},	# a reference to another component named "ahs_1"
+	after_header_struct (4) {ahs_2},# a reference to several other components named "ahs_2"
+	BYTE,							# an unnamed byte with undefined content
+	BYTE {byte_1},					# a single byte, "byte_1"
+	BYTE (5) {byte_2},				# followed by 5 bytes named "byte_2"
+	file_end;						# another reference to a component, "file_end", but unnamed
+
+after_header_struct ::=				# definition of "after_header_struct"
+	"lalelu",						# a static string containing "lalelu"
+	BYTE (2);  						# contains two unnamed bytes
+
+file_end ::=						# definition of "file_end" component
+	BYTE {a_byte},					# a single byte, named "a_byte"
+	eof_component;					# end of file
+
+eof_component ::= 
+	EOF;
+	
+	
