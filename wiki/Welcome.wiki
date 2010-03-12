@@ -10,6 +10,7 @@ The cornerstones of the Contours framework are
 
 Continue with
    * ContoursHistory
+   * ContoursArchitecture
    * BuildInstructions
    * FileFormatDefinition
    * ParserIntegration
