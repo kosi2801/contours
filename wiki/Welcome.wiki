@@ -1,4 +1,5 @@
 #summary Welcome page
+#labels Featured
 
 = Welcome =
 *Contours* is a framework for Java applications which allows them to describe the format of arbitrary files using a simple format description language and then read in data from such files for further processing.
