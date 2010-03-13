@@ -15,5 +15,6 @@ Continue with
    * BuildInstructions
    * FileFormatDefinition
    * ParserIntegration
+   * FuturePlans
    * [FAQ]
    * [Links]
